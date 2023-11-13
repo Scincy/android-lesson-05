@@ -14,7 +14,9 @@
         // URLSearchParams는 URL의 쿼리 파라미터를 가져오는 객체입니다.
         let params = new URLSearchParams(window.location.search);
         // 쿼리 파라미터 중 success가 true일 경우, 미리 설정해둔 span에 메시지를 삽입합니다.
-        if (params.get("success") != null) {
+        let result = params.get("success");
+        console.log(result);
+        if (result != null ) {
             document.getElementById("message").innerHTML = "새 텍스트를 업로드하였습니다.";
         }
     </script>
